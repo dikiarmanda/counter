@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter</title>
+  <link rel="stylesheet" href="bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+  <style>
+    button {
+      position: absolute;
+      bottom: 20px;
+      left: calc(50% - (68.25px * 0.5));
+    }
+
+    .col-6 {
+      height: 50vh;
+    }
+    @media screen {
+      
+    }
+    h1 {
+      font-size: 9rem;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid text-center">
+    <div class="row vh-100">
+      <div class="col-6 bg-primary">
+        <div class="row">
+          <div class="col-12"><h2>PASLON 1</h2></div>
+          <div class="col-12 mt-lg-5">
+            <h1 id="count1">0</h1>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 bg-warning">
+        <div class="row">
+          <div class="col-12"><h2>PASLON 2</h2></div>
+          <div class="col-12 mt-lg-5">
+            <h1 id="count2">0</h1>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 bg-danger">
+        <div class="row">
+          <div class="col-12"><h2>PASLON 3</h2></div>
+          <div class="col-12 mt-lg-5">
+            <h1 id="count3">0</h1>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 bg-white">
+        <div class="row">
+          <div class="col-12"><h2>GUGUR</h2></div>
+          <div class="col-12 mt-lg-5">
+            <h1 id="count4">0</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-success" onclick="reloadPage()">RESET</button>
+  </div>
+  <script src="bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const btn = document.querySelectorAll('.col-6')
+    const btnCounter1 = btn[0]
+    const textCounter1 = document.getElementById('count1')
+    const btnCounter2 = btn[1]
+    const textCounter2 = document.getElementById('count2')
+    const btnCounter3 = btn[2]
+    const textCounter3 = document.getElementById('count3')
+    const btnCounter4 = btn[3]
+    const textCounter4 = document.getElementById('count4')
+    let counter1 = 0, counter2 = 0, counter3 = 0, counter4 = 0
+
+    btnCounter1.addEventListener('click', () =>
+      textCounter1.innerText = counter1++,
+      counter1++
+    )
+
+    btnCounter2.addEventListener('click', () =>
+      textCounter2.innerText = counter2++,
+      counter2++
+    )
+
+    btnCounter3.addEventListener('click', () =>
+      textCounter3.innerText = counter3++,
+      counter3++
+    )
+
+    btnCounter4.addEventListener('click', () =>
+      textCounter4.innerText = counter4++,
+      counter4++
+    )
+
+    function reloadPage() {
+      location.reload();
+    }
+  </script>
+</body>
+
+</html>
